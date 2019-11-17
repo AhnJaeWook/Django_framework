@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
-    'mystorage',
+    'rest_framework', #rest_framework 등록
+    'mystorage', #app mystorage 등록
 ]
 
 MIDDLEWARE = [
@@ -121,9 +121,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+#media를 사용하기 위해(사용자가 업로드)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+#pagenation을 사용하기 위한 소스
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10,
